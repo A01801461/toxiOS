@@ -7,8 +7,8 @@ function updateClock() {
     document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
 }
 
-// setInterval(updateClock, 1000);
-// updateClock();
+setInterval(updateClock, 1000);
+updateClock();
 
 // Mostrar notificación
 setTimeout(() => {

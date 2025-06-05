@@ -82,6 +82,21 @@ body {
     width: 50px;
 }
 
+.boton-codigo{
+    background: rgb(49, 49, 49);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.boton-codigo:hover{
+    background: rgb(27, 27, 27);
+}
+
 /* Barra de tareas */
 .taskbar {
     position: absolute;
@@ -175,8 +190,8 @@ body {
     overflow: hidden;
     display: none;
     flex-direction: column;
-    min-width: 400px;
-    min-height: 300px;
+    min-width: 500px;
+    min-height: 400px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     top: 50%;
     left: 50%;
@@ -231,6 +246,18 @@ body {
     padding: 20px;
     color: #333;
     overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.window-file {
+    flex-grow: 1;
+    padding: 20px;
+    color: #333;
+    overflow: auto;
 }
 
 /* Notificaciones */
@@ -242,7 +269,7 @@ body {
     color: white;
     padding: 15px;
     border-radius: 8px;
-    max-width: 300px;
+    max-width: 450px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     border-left: 4px solid #4a90e2;
     display: none;

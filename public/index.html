@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escritorio Virtual Simulado</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="desktop" id="desktop">
+        <!-- Iconos del escritorio -->
+        <div class="icon" style="top: 50px; left: 150px;" data-window="browser">
+            <i class="fa-solid fa-globe"></i>
+            <span>Goolag</span>
+        </div>
+
+        <div class="icon" style="top: 50px; left: 50px;" data-window="settings">
+            <i class="fa-solid fa-gear"></i>
+            <span>Configuración</span>
+        </div>
+
+        <div class="icon" style="top: 150px; left: 50px;" data-window="folder">
+            <i class="fa-solid fa-folder"></i>
+            <span>Porno</span>
+        </div>
+        
+        <div class="icon" style="top: 150px; left: 150px;" data-window="terminal">
+            <i class="fab fa-instagram"></i>
+            <span>EgoGram</span>
+        </div>
+
+        <div class="icon" style="top: 50px; left: 250px;" data-window="trash">
+            <i class="fa-solid fa-trash-can"></i>
+            <span>Papelera</span>
+        </div>
+
+        <div class="icon" style="top: 150px; left: 250px;" data-window="trash">
+            <i class="fab fa-linkedin"></i>
+            <span>LinkeDrain</span>
+        </div>
+
+        <div class="icon" style="top: 250px; left: 50px;" data-window="trash">
+            <i class="fas fa-passport"></i>
+            <span>Pasaporte</span>
+        </div>
+        
+        <!-- Notificación -->
+        <div class="notification" id="notification">
+            <h3>Nuevo Like!</h3>
+            <p>Aunque no es de quien esperabas.</p>
+        </div>
+        
+        <!-- Selector de wallpaper -->
+        <div class="wallpaper-selector">
+            <h3>Fondos de pantalla</h3>
+            <div class="wallpaper-options">
+                <div class="wallpaper-option active" data-wallpaper="images/wallpaper1.jpg"></div>
+                <div class="wallpaper-option" data-wallpaper="images/wallpaper2.jpg"></div>
+                <div class="wallpaper-option" data-wallpaper="images/wallpaper3.jpg"></div>
+            </div>
+        </div>
+        
+        <!-- Ventanas -->
+        <div class="window" id="folder-window">
+            <div class="window-header">
+                <div class="window-title">Porno</div>
+                <div class="window-controls">
+                    <div class="window-btn minimize-btn"><i class="fa-solid fa-window-minimize"></i></div>
+                    <div class="window-btn maximize-btn"><i class="fa-regular fa-window-maximize"></i></div>
+                    <div class="window-btn close-btn" data-window="folder"><i class="fa-solid fa-xmark"></i></div>
+                </div>
+            </div>
+            <div class="window-content">
+                <ul class="file-list">
+                    <li><i class="fa-solid fa-file-image"></i> abuso.png</li>
+                    <li><i class="fa-solid fa-file"></i> traficoBlancas.mp4</li>
+                    <li><i class="fa-solid fa-file-image"></i> adiccion.jpg</li>
+                    <li><i class="fa-solid fa-folder"></i> Dependencia</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="window" id="browser-window">
+            <div class="window-header">
+                <div class="window-title">Goolag</div>
+                <div class="window-controls">
+                    <div class="window-btn minimize-btn"><i class="fa-solid fa-window-minimize"></i></div>
+                    <div class="window-btn maximize-btn"><i class="fa-regular fa-window-maximize"></i></div>
+                    <div class="window-btn close-btn" data-window="browser"><i class="fa-solid fa-xmark"></i></div>
+                </div>
+            </div>
+            <div class="window-content browser-content" style="align-content: center;">
+                <h1>Bienvenido a Goolag</h1>
+                <p>El buscador número uno en minería de pensamientos. Diseñado para explotar tus datos al máximo,</p>
+                <p>predecir tus deseos antes que tú mismo, y vender tu atención al mejor postor. </p>
+                <textarea placeholder="Buscar..." style="width: 400px;"></textarea>
+            </div>
+        </div>
+        
+        <div class="window" id="settings-window">
+            <div class="window-header">
+                <div class="window-title">Configuración del sistema</div>
+                <div class="window-controls">
+                    <div class="window-btn minimize-btn"><i class="fa-solid fa-window-minimize"></i></div>
+                    <div class="window-btn maximize-btn"><i class="fa-regular fa-window-maximize"></i></div>
+                    <div class="window-btn close-btn" data-window="settings"><i class="fa-solid fa-xmark"></i></div>
+                </div>
+            </div>
+            <div class="window-content">
+                <h2>Opciones del sistema</h2>
+                <div class="setting-item">
+                    <label>Felicidad: </label>
+                    <input type="range" min="0" max="100" value="80">
+                </div>
+                <div class="setting-item">
+                    <label>Perfeccion: </label>
+                    <input type="range" min="0" max="100" value="70">
+                </div>
+                <div class="setting-item">
+                    <label>Privacidad: </label>
+                    <select>
+                        <option selected>Apagada</option>
+                        <option>Baja</option>
+                        <option>Muy baja</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Barra de tareas -->
+        <div class="taskbar">
+            <button class="start-btn" id="start-btn">
+                <i class="fas fa-power-off"></i>
+                Apagar
+            </button>
+            
+            <div class="taskbar-icons">
+                <div class="task-icon active"><i class="fa-solid fa-desktop"></i></div>
+                <div class="task-icon"><i class="fa-solid fa-folder"></i></div>
+            </div>
+            
+            <div class="system-tray">
+                <div class="tray-icon"><i class="fa-solid fa-wifi"></i></div>
+                <div class="tray-icon"><i class="fa-solid fa-volume-high"></i></div>
+                <div class="tray-icon"><i class="fa-solid fa-battery-full"></i></div>
+                <div class="clock">11:11</div> <!-- <div class="clock" id="clock">00:00:00</div>  para hora actualizada-->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -90,23 +90,6 @@ document.querySelectorAll('.minimize-btn').forEach(btn => {
     });
 });
 
-document.querySelectorAll('.maximize-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-        const window = btn.closest('.window');
-        if (window.style.width === '95%') {
-            window.style.width = '';
-            window.style.height = '';
-            window.style.left = '';
-            window.style.top = '';
-        } else {
-            window.style.width = '95%';
-            window.style.height = '85%';
-            window.style.left = '2.5%';
-            window.style.top = '5%';
-        }
-    });
-});
-
 // Event listeners para iconos
 document.querySelectorAll('.icon').forEach(icon => {
     icon.addEventListener('click', () => {

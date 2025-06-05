@@ -5,6 +5,16 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+a {
+  color: inherit;          /* Hereda el color del elemento padre */
+  text-decoration: none;   /* Elimina el subrayado */
+  background-color: transparent; /* Elimina el fondo (útil para algunos navegadores) */
+  font-weight: inherit;    /* Hereda el peso de la fuente */
+  font-style: inherit;     /* Hereda el estilo de la fuente (cursiva, etc.) */
+  font-size: inherit;      /* Hereda el tamaño de fuente */
+  cursor: inherit;        /* Hereda el tipo de cursor */
+}
+
 body {
     background: black;
     height: 100vh;

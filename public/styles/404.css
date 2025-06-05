@@ -28,7 +28,7 @@ body {
 .desktop {
     width: 95vw;
     height: 90vh;
-    background: url('../images/404.png') center/cover no-repeat;
+    background: url('../images/wallpapers/404.png') center/cover no-repeat;
     border-radius: 12px;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
     position: relative;

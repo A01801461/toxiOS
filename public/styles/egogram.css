@@ -28,49 +28,12 @@ body {
 .desktop {
     width: 95vw;
     height: 90vh;
-    background: url('../images/mapa.png') center/cover no-repeat;
+    background: url('../images/egogram.png') center/cover no-repeat;
     border-radius: 12px;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
     position: relative;
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* Iconos del escritorio */
-.desktop-icons {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 30px;
-    width: 100%;
-    height: 100%;
-}
-
-.icon {
-    width: 80px;
-    height: 90px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    position: absolute;
-}
-
-.imagen-mapa{
-    height: 60px;
-    filter: drop-shadow(0 0 8px rgba(0,0,0,1));
-}
-
-.icon:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 5px;
-}
-
-.icon i {
-    font-size: 36px;
-    margin-bottom: 8px;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* Botón para volver */
@@ -80,7 +43,7 @@ body {
     right: 20px;
     width: 40px;
     height: 40px;
-    background: rgba(255, 255, 255, 0.1);
+    background: black;
     backdrop-filter: blur(10px);
     border-radius: 50%;
     display: flex;
@@ -175,4 +138,70 @@ body {
 
 .clock:hover {
     background: rgba(255, 255, 255, 0.1);
+}
+
+/* Contenedor de scroll con imágenes - ahora en los 2/3 derechos */
+.image-scroll-container {
+    position: absolute;
+    top: 50px;
+    left: 33.33%; /* Comienza después del primer tercio */
+    width: 66.66%; /* Ocupa dos tercios */
+    height: calc(100% - 95px);
+    overflow-y: auto;
+    padding: 15px;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+
+/* Cambiamos el grid por una lista vertical */
+.image-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding-right: 15px; /* Espacio para la scrollbar */
+}
+
+/* Ajustamos el estilo de cada item para la lista vertical */
+.image-item {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 600px; /* Ancho máximo para cada imagen */
+    margin: 0 auto; /* Centrado horizontal */
+}
+
+.image-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.image-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.image-caption {
+    padding: 12px 15px;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+    line-height: 1.4;
+}
+
+/* Estilos para la barra de scroll (mantenemos los mismos) */
+.image-scroll-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.image-scroll-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.image-scroll-container::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
 }

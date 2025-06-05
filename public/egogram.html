@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EgoGram</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/egogram.css">
+</head>
+<body>
+    <div class="desktop">
+        <!-- Botón para volver -->
+        <a href="index.html" class="back-btn">
+            <i class="fas fa-times"></i>
+        </a>
+
+        <div class="wallpaper-option active" data-wallpaper="images/wallpaper1.jpg"></div>
+        
+        <!-- Contenedor de scroll con imágenes -->
+        <div class="image-scroll-container">
+            <div class="image-list">
+                <!-- Ejemplo de 10 imágenes con texto (puedes añadir más dinámicamente) -->
+                <div class="image-item">
+                    <img src="https://picsum.photos/400/250?random=1" alt="Imagen 1">
+                    <div class="image-caption">Esta es la descripción de la imagen número 1</div>
+                </div>
+                <div class="image-item">
+                    <img src="https://picsum.photos/400/250?random=2" alt="Imagen 2">
+                    <div class="image-caption">Texto descriptivo bajo la imagen 2</div>
+                </div>
+                <div class="image-item">
+                    <img src="https://picsum.photos/400/250?random=3" alt="Imagen 3">
+                    <div class="image-caption">Tercera imagen con su texto correspondiente</div>
+                </div>
+                <div class="image-item">
+                    <img src="https://picsum.photos/400/250?random=4" alt="Imagen 4">
+                    <div class="image-caption">Descripción más larga para esta cuarta imagen de ejemplo</div>
+                </div>
+                <div class="image-item">
+                    <img src="https://picsum.photos/400/250?random=5" alt="Imagen 5">
+                    <div class="image-caption">Imagen 5 - Texto de ejemplo</div>
+                </div>
+                <div class="image-item">
+                    <img src="https://picsum.photos/400/250?random=6" alt="Imagen 6">
+                    <div class="image-caption">Sexta imagen en la lista</div>
+                </div>
+                <div class="image-item">
+                    <img src="https://picsum.photos/400/250?random=7" alt="Imagen 7">
+                    <div class="image-caption">Texto descriptivo número 7</div>
+                </div>
+                <div class="image-item">
+                    <img src="https://picsum.photos/400/250?random=8" alt="Imagen 8">
+                    <div class="image-caption">Octava imagen con su pie de foto</div>
+                </div>
+                <div class="image-item">
+                    <img src="https://picsum.photos/400/250?random=9" alt="Imagen 9">
+                    <div class="image-caption">Penúltima imagen de esta demostración</div>
+                </div>
+                <div class="image-item">
+                    <img src="https://picsum.photos/400/250?random=10" alt="Imagen 10">
+                    <div class="image-caption">Última imagen de ejemplo con su texto</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Barra de tareas -->
+        <div class="taskbar">
+            <div class="taskbar-icons">
+                <div class="task-icon active"><i class="fa-solid fa-desktop"></i></div>
+                <div class="task-icon"><i class="fa-solid fa-folder"></i></div>
+            </div>
+            
+            <div class="system-tray">
+                <div class="tray-icon"><i class="fa-solid fa-wifi"></i></div>
+                <div class="tray-icon"><i class="fa-solid fa-volume-high"></i></div>
+                <div class="tray-icon"><i class="fa-solid fa-battery-full"></i></div>
+                <div class="clock">11:11</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

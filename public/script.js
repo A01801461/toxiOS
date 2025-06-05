@@ -16,8 +16,8 @@ setTimeout(() => {
     notification.style.display = 'block';
     setTimeout(() => {
         notification.style.display = 'none';
-    }, 10000);
-}, 10000);
+    }, 3000);
+}, 5000);
 
 // Abrir ventanas
 function openWindow(type) {

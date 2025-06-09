@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -126,6 +127,8 @@ body {
 }
 
 .terminal-text {
+    font-size: 14px;
+    line-height: 1.6;
     color: white;
     white-space: pre-wrap;
     text-shadow: 0 0 2px gray;

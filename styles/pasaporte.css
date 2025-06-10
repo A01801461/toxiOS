@@ -28,22 +28,30 @@ body {
 .desktop {
     width: 95%;
     height: 90%;
-    background: url('../images/wallpapers/mapa.gif') center/cover no-repeat;
+    background-color: #333;
     border-radius: 12px;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
     position: relative;
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
 }
 
-/* Iconos del escritorio */
-.desktop-icons {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 30px;
+/* NUEVO: Contenedor para el mapa y los iconos */
+.map-container {
+    flex-grow: 1; /* Ocupa todo el espacio vertical disponible */
+    position: relative; /* ESENCIAL: para que los iconos se posicionen respecto a él */
+    overflow: hidden;
+}
+
+/* NUEVO: Estilos para la imagen del mapa */
+.map-image {
     width: 100%;
     height: 100%;
+    /* object-fit: cover; simula el comportamiento de background-size: cover */
+    object-fit: cover; 
+    display: block;
 }
 
 .icon {
@@ -52,9 +60,13 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     cursor: pointer;
     transition: all 0.3s ease;
     position: absolute;
+    position: absolute; /* Se posiciona respecto al .map-container */
+    /* Usamos transform para centrar el icono en las coordenadas */
+    transform: translate(-50%, -50%);
 }
 
 .imagen-mapa{
@@ -125,6 +137,7 @@ body {
     align-items: center;
     padding: 0 15px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+    flex-shrink: 0; /* Evita que se encoja */
 }
 
 .taskbar-icons {
